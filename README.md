@@ -25,7 +25,7 @@ mkdir pip-cache
 ```
 
 ## Downloading the model
-You can download the pre-trained model using the hugging face command line(this is optional, but speeds up the training)
+You can download the pre-trained model using the hugging face command line(this is optional, but speeds up the training), if you do so, change local_files_only to true in cell 4 of CMSC472Final.ipynb
 
 
 ```huggingface-cli download Qwen/Qwen2-VL-7B-Instruct --cache-dir /path/to/hf-cache```
