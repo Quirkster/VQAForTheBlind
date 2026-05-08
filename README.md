@@ -1,6 +1,5 @@
 # VQAForTheBlind
-Supporting Visual Question answering for the Blind
-
+Training a Visual Language model to provide clear, concise answers to questions about photos taken by blind people.
 
 # Running the notebook in Zaratan
 ## Set up a venv
@@ -29,7 +28,7 @@ mkdir pip-cache
 You can download the pre-trained model using the hugging face command line(this is optional, but speeds up the training)
 
 
-```huggingface-cli download Qwen/Qwen2-VL-7B-Instruct --cache-dir ~/scratch/hf-cache```
+```huggingface-cli download Qwen/Qwen2-VL-7B-Instruct --cache-dir /path/to/hf-cache```
 
 Our pretrained weights are in the provided zip file.
 
@@ -39,8 +38,33 @@ Our pretrained weights are in the provided zip file.
 
 Note that the images and annotations are contained in separate download links.
 
-## creating an h5 file and cropping the images
+## Creating an h5 file and cropping the images
 Our program requires the data to be in the h5 format. Run experiments/convert_to_h5.py on both the train and test set of images, replacing the path on line 6 with your path.
 
 In order to test out our model with cropped images, use src/Object_localization.ipynb.
+
+Store these images in the directory you will run the notebook from with the following names:
+Train images: train_dataset.h5
+Train cropped images: train_dataset_cropped.h5
+Train annotations: train.json
+
+Validation images: val_dataset.h5
+Validation cropped images: val_dataset_cropped.h5
+Validation annotations: val.json
+## Training the model
+The notebook with the model code is CMSC472Final.ipynb. Before running the notebook, change the path_to_directory variable in cell 3 to the path to your hf-cache. 
+
+Running the full notebook (CMSC472final.ipynb) will:
+1. Evaluate the baseline VLM on the train and val set on both cropped and uncropped images(approx 3 hours)
+2. Fine tune the model(approx 6 hours)
+3. Evaluate the fine-tuned model(approx 3 hours)
+
+Runtimes listed are with a single a100 gpu.
+
+### To evaluate without training
+Run the notebook excluding cell #13, 14
+
+### To train without evaluating
+Run the notebook excluding cells #11, #15, 17
+
 
