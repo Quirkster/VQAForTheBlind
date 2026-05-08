@@ -2,8 +2,8 @@
 Supporting Visual Question answering for the Blind
 
 
-#Running the notebook in Zaratan
-##Set up a venv
+# Running the notebook in Zaratan
+## Set up a venv
 It is recommended that you do this in the scratch directory.
 ```
 module load python
