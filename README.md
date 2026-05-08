@@ -40,5 +40,7 @@ Our pretrained weights are in the provided zip file.
 Note that the images and annotations are contained in separate download links.
 
 ## creating an h5 file and cropping the images
-TODO
+Our program requires the data to be in the h5 format. Run experiments/convert_to_h5.py on both the train and test set of images, replacing the path on line 6 with your path.
+
+In order to test out our model with cropped images, use src/Object_localization.ipynb.
 
