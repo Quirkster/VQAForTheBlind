@@ -1,0 +1,16 @@
+Download the dataset from the link below, "training", "validation" and "test" are the images from those splits 
+and "training and validation annotations" includes the necessary json files for labels
+
+https://vizwiz.org/tasks-and-datasets/vqa/
+
+Our program requires the data to be in the h5 format.
+Run experiments/convert_to_h5.py on both the train and validation set of images,
+using the argument --input_dir path_to_directory and replace path_to_directory with the path to the folder that contains all the images.
+You can specify the output folder name with the argument --output_file output_file_name and replace output_file_name with your desired name.
+The default is dataset.h5.
+
+In order to test out our model with cropped images, use src/Object_localization.ipynb.
+
+Store these images in the directory you will run the notebook from with the following names:
+Train images: train_dataset.h5 Train cropped images: train_dataset_cropped.h5 Train annotations: train.json
+Validation images: val_dataset.h5 Validation cropped images: val_dataset_cropped.h5 Validation annotations: val.json
