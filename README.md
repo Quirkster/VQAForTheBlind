@@ -39,3 +39,6 @@ Our pretrained weights are in the provided zip file.
 
 Note that the images and annotations are contained in separate download links.
 
+## creating an h5 file and cropping the images
+TODO
+
