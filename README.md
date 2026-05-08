@@ -27,7 +27,7 @@ mkdir pip-cache
 
 ## Downloading the model
 You can download the pre-trained model using the hugging face command line(this is optional, but speeds up the training)
-huggingface-cli download Qwen/Qwen2-VL-7B-Instruct --cache-dir ~/scratch/hf-cache
+```huggingface-cli download Qwen/Qwen2-VL-7B-Instruct --cache-dir ~/scratch/hf-cache```
 
 Our pretrained weights are in the provided zip file.
 
