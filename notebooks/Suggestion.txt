@@ -1,0 +1,1 @@
+This folder is optional, maybe we have this instead of the src folder or maybe we put the convert_to_h5 in here
