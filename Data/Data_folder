@@ -1,0 +1,14 @@
+This the folder for the data, delete this when we enter the data.
+It's too big for GitHub so I think just move the data in here after downloading all the files.
+
+Need
+train_dataset.h5
+train_dataset_cropped.h5
+val_dataset.h5
+val_dataset_cropped.h5
+
+train.json
+val.json
+
+Or if you don't want to do that we can tell them to download from the workshop and turn it into an h5 file.
+They might get mad cause the original train file is 10GB but idk.
